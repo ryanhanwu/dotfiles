@@ -1,0 +1,25 @@
+[user]
+	name = Ryan Wu
+	email = hello@ryanwu.me
+[color]
+	interactive = auto
+	status = auto
+	branch = auto
+	diff = auto
+[core]
+	editor = vim
+	excludesfile = /Users/flyworld/.gitignore
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+[push]
+	default = matching
+[difftool "sourcetree"]
+	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+	trustExitCode = true
