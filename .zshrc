@@ -20,6 +20,9 @@ function addPath(){
 alias vizsh="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
+alias h="history"
+alias hs="history | grep"
+alias pa='ps aux'
 alias rm='rm -i'
 alias rd='rm -rf'
 alias server="python -m SimpleHTTPServer 9000 && open http://localhost:9000"
@@ -27,8 +30,10 @@ alias server="python -m SimpleHTTPServer 9000 && open http://localhost:9000"
 
 #Node.js - NVM and npm
 [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion #https://github.com/creationix/nvm#bash-completion
+. <(npm completion) #https://npmjs.org/doc/completion.html
 nvm use default
-. <(npm completion)
+
 #autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 #Ruby
