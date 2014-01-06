@@ -21,7 +21,7 @@ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 ##### Brews
 ```
-brew install autojump graphicsmagick htop nmap postgresql terminal-notifier tmux tree wget
+brew install git autojump graphicsmagick htop nmap postgresql terminal-notifier tmux tree wget
 ```
 
 ### Shell
