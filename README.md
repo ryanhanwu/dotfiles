@@ -1,6 +1,6 @@
 #dotfiles
 
-These are files and basic configs of my development machine(Mac), feel free to take do whatever you want.
+These are dot-files and basic configs of my development machine(Mac), feel free to take do whatever you want.
 
 ### My dotfiles
 
