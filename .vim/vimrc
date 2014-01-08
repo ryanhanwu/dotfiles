@@ -43,7 +43,7 @@ Bundle 'groenewege/vim-less'
 Bundle 'jnwhiteh/vim-golang'
 
 " Ensure vim uses bash
-set shell=/bin/bash
+set shell=/bin/zsh
 
 " Some kind of security thing
 set modelines=0

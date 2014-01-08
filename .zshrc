@@ -11,13 +11,14 @@ plugins=(autojump git brew rvm copydir copyfile encode64 node osx sublime urltoo
 source $ZSH/oh-my-zsh.sh
 
 #System basic pth
-export PATH=~/bin:/usr/local/sbin:/usr/bin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:$PATH
+export PATH=~/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:$PATH
 
 function addPath(){
   export PATH=$PATH:$1
 }
 
 alias vizsh="vim ~/.zshrc"
+alias vissh="vim ~/.ssh/config"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
 alias h="history"

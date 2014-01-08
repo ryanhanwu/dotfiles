@@ -64,6 +64,6 @@ sudo pip install --upgrade awscli
 Basic global node packages
 
 ```
-npm install bower compound docpad express forever grunt grunt-cli hexo nodemon sails weinre yo -g
+npm install bower compound cordova docpad express forever grunt grunt-cli hexo nodemon sails weinre yo -g
 ```
 
