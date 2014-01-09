@@ -51,5 +51,6 @@ addPath "/usr/local/heroku/bin"
 addPath "/usr/local/deployd/bin"
 #Postgres Db
 addPath "/Applications/Postgres.app/Contents/MacOS/bin"
-
+#Android SDK
+addPath "$HOME/LocalProjects/adt-bundle-mac-x86_64/sdk/tools"
 
