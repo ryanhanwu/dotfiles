@@ -1,6 +1,5 @@
 " Need to call on initially to support git
 filetype on
-filetype off
 set nocompatible
 
 " Vundle initialization
@@ -19,6 +18,7 @@ Bundle 'airblade/vim-rooter'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-commentary'
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'kien/ctrlp.vim'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-repeat'
@@ -87,7 +87,6 @@ set softtabstop=2
 
 " Line number rules
 set number
-set rnu
 
 " Set the default encoding to the always trusty UTF-8
 set encoding=utf-8

@@ -27,7 +27,7 @@ alias pa='ps aux'
 alias rm='rm -i'
 alias rd='rm -rf'
 alias server="python -m SimpleHTTPServer 9000 && open http://localhost:9000"
-
+alias npmc="npm ls --parseable|sed 's/.*\/\(.*\)/\1/g'|sort|uniq|wc -l"
 
 #Node.js - NVM and npm
 [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh
@@ -53,4 +53,5 @@ addPath "/usr/local/deployd/bin"
 addPath "/Applications/Postgres.app/Contents/MacOS/bin"
 #Android SDK
 addPath "$HOME/LocalProjects/adt-bundle-mac-x86_64/sdk/tools"
-
+#Php
+addPath "$(brew --prefix josegonzalez/php/php53)/bin"
