@@ -67,3 +67,7 @@ Basic global node packages
 npm install bower compound cordova docpad express forever grunt grunt-cli hexo nodemon sails weinre yo -g
 ```
 
+## License
+
+MIT: http://ryanwu.mit-license.org
+
