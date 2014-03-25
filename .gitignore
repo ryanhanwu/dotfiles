@@ -1,2 +1,2 @@
 .ssh/
-.vim/bundle
+vim/bundle/*
