@@ -1,0 +1,13 @@
+<snippet>
+    <content><![CDATA[
+flow.exec(function() {
+    ${1:doSth}("xxx", this);
+}, function(error) {
+
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>flow</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+(function(${1:input}) {
+    
+
+})(${1:input});
+]]></content>
+    <tabTrigger>function</tabTrigger>
+    <scope>source.js</scope>
+    <description>Self-executing Function</description>
+</snippet>
