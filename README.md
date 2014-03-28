@@ -54,9 +54,16 @@ sudo easy_install pip
 sudo pip install setuptools --no-use-wheel --upgrade
 sudo pip install --upgrade awscli
 ```
+#### Sublime Text 2
+Creating the symbolic links
 
+```
+ln -s SublimeTextSettings "~/Library/Application Support/Sublime Text 2/Packages/User"
+```
+* The PackageControl will check the ```Package Conttrol.sublime-settings``` everytime it starts up and automatically installs missing plugins.
 
-#### Download
+#### Utilities
+
 * [Deployd](http://deployd.com/)
 * [Heroku](https://toolbelt.herokuapp.com/)
 
