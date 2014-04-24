@@ -14,7 +14,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=~/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:$PATH
 
 function addPath(){
-  export PATH=$PATH:$1
+  export PATH=$1:$PATH
 }
 
 alias vizsh="vim ~/.zshrc"
@@ -53,5 +53,6 @@ addPath "/usr/local/deployd/bin"
 addPath "/Applications/Postgres.app/Contents/MacOS/bin"
 #Android SDK
 addPath "$HOME/LocalProjects/adt-bundle-mac-x86_64/sdk/tools"
-#Php
-addPath "$(brew --prefix josegonzalez/php/php53)/bin"
+
+#MAMP PHP
+addPath "/Applications/MAMP/bin/php/php5.5.3/bin"

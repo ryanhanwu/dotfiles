@@ -1,2 +1,3 @@
 ssh/
 vim/bundle/*
+*.cache
