@@ -19,6 +19,7 @@ function addPath(){
 
 alias vizsh="vim ~/.zshrc"
 alias vissh="vim ~/.ssh/config"
+alias vivim="vim ~/.vimrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
 alias h="history"
@@ -28,6 +29,10 @@ alias rm='rm -i'
 alias rd='rm -rf'
 alias server="python -m SimpleHTTPServer 9000 && open http://localhost:9000"
 alias npmc="npm ls --parseable|sed 's/.*\/\(.*\)/\1/g'|sort|uniq|wc -l"
+# get web server headers #
+alias header='curl -I'
+# find out if remote server supports gzip / mod_deflate or not #
+alias headerc='curl -I --compress'
 
 #Node.js - NVM and npm
 [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh
@@ -56,3 +61,5 @@ addPath "$HOME/LocalProjects/adt-bundle-mac-x86_64/sdk/tools"
 
 #MAMP PHP
 addPath "/Applications/MAMP/bin/php/php5.5.3/bin"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
