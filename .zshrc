@@ -4,9 +4,11 @@ CASE_SENSITIVE="false"
 SHELL="/bin/zsh"
 # DISABLE_AUTO_UPDATE="true"
 export UPDATE_ZSH_DAYS=14
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(autojump git brew rvm copydir copyfile encode64 node osx sublime urltools tmux vagrant)
+plugins=(autojump git brew rvm copydir copyfile encode64 node osx sublime urltools tmux vagrant xcode pod)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -14,7 +16,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=~/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:$PATH
 
 function addPath(){
-  export PATH=$1:$PATH
+  export PATH=$PATH:$1
 }
 
 alias vizsh="vim ~/.zshrc"
@@ -22,6 +24,7 @@ alias vissh="vim ~/.ssh/config"
 alias vivim="vim ~/.vimrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
+alias cls="clear"
 alias h="history"
 alias hs="history | grep"
 alias pa='ps aux'
@@ -43,8 +46,6 @@ nvm use default
 #autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 #Ruby
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 
 #Rvm
 addPath "$HOME/.rvm/bin"
@@ -58,8 +59,5 @@ addPath "/usr/local/deployd/bin"
 addPath "/Applications/Postgres.app/Contents/MacOS/bin"
 #Android SDK
 addPath "$HOME/LocalProjects/adt-bundle-mac-x86_64/sdk/tools"
-
 #MAMP PHP
 addPath "/Applications/MAMP/bin/php/php5.5.3/bin"
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
