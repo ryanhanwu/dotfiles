@@ -2,11 +2,11 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="dpoggi"
 CASE_SENSITIVE="false"
 SHELL="/bin/zsh"
-# DISABLE_AUTO_UPDATE="true"
+
 export UPDATE_ZSH_DAYS=14
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
-COMPLETION_WAITING_DOTS="true"
+export COMPLETION_WAITING_DOTS="true"
 
 plugins=(autojump git brew rvm copydir copyfile encode64 node osx sublime urltools tmux vagrant xcode pod)
 
@@ -23,14 +23,13 @@ alias vizsh="vim ~/.zshrc"
 alias vissh="vim ~/.ssh/config"
 alias vivim="vim ~/.vimrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-
 alias cls="clear"
 alias h="history"
 alias hs="history | grep"
 alias pa='ps aux'
 alias rm='rm -i'
 alias rd='rm -rf'
-alias server="python -m SimpleHTTPServer 9000 && open http://localhost:9000"
+alias web="python -m SimpleHTTPServer "
 alias npmc="npm ls --parseable|sed 's/.*\/\(.*\)/\1/g'|sort|uniq|wc -l"
 # get web server headers #
 alias header='curl -I'
@@ -45,7 +44,6 @@ nvm use default
 
 #autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-#Ruby
 
 #Rvm
 addPath "$HOME/.rvm/bin"
