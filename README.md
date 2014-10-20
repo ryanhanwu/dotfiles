@@ -21,7 +21,7 @@ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 ##### Brews
 ```
-brew install git autojump graphicsmagick htop nmap postgresql terminal-notifier tmux tree wget
+brew install git autojump graphicsmagick htop nmap terminal-notifier tmux tree wget imagemagick
 ```
 
 ### Shell
@@ -54,25 +54,30 @@ sudo easy_install pip
 sudo pip install setuptools --no-use-wheel --upgrade
 sudo pip install --upgrade awscli
 ```
-#### Sublime Text 2
-Creating the symbolic links
+#### Sublime Text 3
+Creating the symbolic links after ```Package Controll``` is installed
 
 ```
-ln -s SublimeTextSettings "~/Library/Application Support/Sublime Text 2/Packages/User"
+ln -s SublimeTextSettings "~/Library/Application Support/Sublime Text 3/Packages/User"
 ```
-* The PackageControl will check the ```Package Conttrol.sublime-settings``` everytime it starts up and automatically installs missing plugins.
+* The PackageControl will check the ```Package Controll.sublime-settings``` everytime it starts up and automatically installs missing plugins.
 
 #### Utilities
 
 * [Deployd](http://deployd.com/)
 * [Heroku](https://toolbelt.herokuapp.com/)
 
-### Node.js Loves
+### Ruby Packages
+```
+gem install sass
+```
+
+### Node.js Packages
 ---
 Basic global node packages
 
 ```
-npm install bower compound cordova docpad express forever grunt grunt-cli hexo nodemon sails weinre yo -g
+npm install bower compound docpad express-cli forever grunt grunt-cli hexo nodemon sails yo -g
 ```
 
 ## License
