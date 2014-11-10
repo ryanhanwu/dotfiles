@@ -58,8 +58,8 @@ sudo pip install --upgrade awscli
 Creating the symbolic links after ```Package Controll``` is installed
 
 ```
-ln -s SublimeTextSettings "~/Library/Application Support/Sublime Text 3/Packages/User"
-ln -s SublimeTextInstalledPackages "~/Library/Application Support/Sublime Text 3/Packages/Installed Packages"
+ln -s "~/Dotfiles/SublimeTextSettings/User" "~/Library/Application Support/Sublime Text 3/Packages/User"
+ln -s "~/Dotfiles/SublimeTextSettings/Installed\ Packages" "~/Library/Application Support/Sublime Text 3/Packages/Installed Packages"
 ```
 * The PackageControl will check the ```Package Controll.sublime-settings``` and ```Installed Packages``` everytime it starts up and automatically installs missing plugins.
 

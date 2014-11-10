@@ -1,4 +1,4 @@
 ssh/
 vim/bundle/*
 *.cache*
-SublimeTextSettings/
+SublimeTextSettings/**/*
