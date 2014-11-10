@@ -1,6 +1,5 @@
 #!/bin/sh
 set -x
-ln -s `pwd`/ssh ~/.ssh
 ln -s `pwd`/vim ~/.vim
 ln -s `pwd`/vim/vimrc ~/.vimrc
 ln -s `pwd`/.zshrc ~/.zshrc

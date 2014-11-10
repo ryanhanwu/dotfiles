@@ -1,17 +1,12 @@
-#dotfiles
+#Dotfiles
 
-These are dot-files and basic configs of my development machine(Mac), feel free to take and do whatever you want.
+These are dot-files and basic configs of my development machine(Mac) envoronment, feel free to take and do whatever you want.
 
-### My dotfiles
-
-Checkout this repository and run following command to initialize default config
-
-```
-sh init.sh
-```
-
-### Package Management Installation
+## Requirement 
 ----
+
+### Mac Package Management 
+
 #### HomeBrew
 [http://brew.sh/](http://brew.sh/)
 
@@ -26,12 +21,31 @@ brew install git autojump graphicsmagick node htop nmap terminal-notifier tmux t
 
 ### Shell
     
- [Oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
+I use [Oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
     
 ```
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 chsh -s /bin/zsh
 ```
+
+
+## Basic Config
+----
+Checkout environment repository
+
+```
+cd ~
+git clone https://github.com/ryanhanwu/dotfiles.git Dotfiles
+```
+
+Create symbolic link and install **Vim** Package with [Vundle](https://github.com/gmarik/Vundle.vim)
+
+```
+cd ~/Dotfiles && sh init.sh
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle
+vim +PluginInstall +qall
+```
+
 
 ### Applications
 ---
@@ -58,8 +72,10 @@ sudo pip install --upgrade awscli
 Creating the symbolic links after ```Package Controll``` is installed
 
 ```
-ln -s "~/Dotfiles/SublimeTextSettings/User" "~/Library/Application Support/Sublime Text 3/Packages/User"
-ln -s "~/Dotfiles/SublimeTextSettings/Installed\ Packages" "~/Library/Application Support/Sublime Text 3/Packages/Installed Packages"
+cd ~
+git clone https://github.com/ryanhanwu/Sublime-Text-Settings.git
+ln -s ~/Sublime-Text-Settings/User ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+ln -s ~/Sublime-Text-Settings/Installed\ Packages ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
 ```
 * The PackageControl will check the ```Package Controll.sublime-settings``` and ```Installed Packages``` everytime it starts up and automatically installs missing plugins.
 
@@ -69,6 +85,7 @@ ln -s "~/Dotfiles/SublimeTextSettings/Installed\ Packages" "~/Library/Applicatio
 * [Heroku](https://toolbelt.herokuapp.com/)
 
 ### Ruby Packages
+---
 ```
 gem install sass
 ```
