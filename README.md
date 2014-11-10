@@ -78,7 +78,7 @@ gem install sass
 Basic global node packages
 
 ```
-npm install bower compound docpad express-cli forever grunt grunt-cli hexo nodemon sails yo -g
+npm install bower compound docpad express-generator forever grunt grunt-cli hexo nodemon sails yo gulp browserify -g
 ```
 
 ## License
