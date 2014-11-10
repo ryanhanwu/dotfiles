@@ -45,6 +45,8 @@ nvm use default
 #autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
+#MongoDb
+addPath "$HOME/Server/mongodb/bin"
 #Rvm
 addPath "$HOME/.rvm/bin"
 #portableapps.com/
