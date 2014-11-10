@@ -21,7 +21,7 @@ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 ##### Brews
 ```
-brew install git autojump graphicsmagick htop nmap terminal-notifier tmux tree wget imagemagick
+brew install git autojump graphicsmagick node htop nmap terminal-notifier tmux tree wget imagemagick zsh
 ```
 
 ### Shell
@@ -59,8 +59,9 @@ Creating the symbolic links after ```Package Controll``` is installed
 
 ```
 ln -s SublimeTextSettings "~/Library/Application Support/Sublime Text 3/Packages/User"
+ln -s SublimeTextInstalledPackages "~/Library/Application Support/Sublime Text 3/Packages/Installed Packages"
 ```
-* The PackageControl will check the ```Package Controll.sublime-settings``` everytime it starts up and automatically installs missing plugins.
+* The PackageControl will check the ```Package Controll.sublime-settings``` and ```Installed Packages``` everytime it starts up and automatically installs missing plugins.
 
 #### Utilities
 
