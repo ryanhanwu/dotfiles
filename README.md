@@ -3,8 +3,6 @@
 These are dot-files and basic configs of my development machine(Mac) envoronment, feel free to take and do whatever you want.
 
 ## Requirement 
-----
-
 ### Mac Package Management 
 
 #### HomeBrew
@@ -30,7 +28,6 @@ chsh -s /bin/zsh
 
 
 ## Basic Config
-----
 Checkout environment repository
 
 ```
@@ -79,19 +76,20 @@ ln -s ~/Sublime-Text-Settings/Installed\ Packages ~/Library/Application\ Support
 ```
 * The PackageControl will check the ```Package Controll.sublime-settings``` and ```Installed Packages``` everytime it starts up and automatically installs missing plugins.
 
+
 #### Utilities
 
 * [Deployd](http://deployd.com/)
 * [Heroku](https://toolbelt.herokuapp.com/)
 
 ### Ruby Packages
----
+
 ```
+rvm use system
 gem install sass
 ```
 
 ### Node.js Packages
----
 Basic global node packages
 
 ```
