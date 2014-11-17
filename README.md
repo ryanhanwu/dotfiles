@@ -39,7 +39,7 @@ Create symbolic link and install **Vim** Package with [Vundle](https://github.co
 
 ```
 cd ~/Dotfiles && sh init.sh
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
 vim +PluginInstall +qall
 ```
 
