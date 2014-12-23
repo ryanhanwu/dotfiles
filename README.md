@@ -82,6 +82,19 @@ ln -s ~/Sublime-Text-Settings/Installed\ Packages ~/Library/Application\ Support
 * [Deployd](http://deployd.com/)
 * [Heroku](https://toolbelt.herokuapp.com/)
 
+### iOS Development Packages
+---
+* After install XCode
+
+##### Install Alcatraz
+```
+curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
+```
+
+#### Plugins
+* [ColorSense for Xcode](https://github.com/omz/ColorSense-for-Xcode)
+* [ClangFormat-Xcode](https://github.com/travisjeffery/ClangFormat-Xcode.git)
+ 
 ### Ruby Packages
 
 ```

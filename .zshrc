@@ -49,8 +49,8 @@ nvm use default
 addPath "$HOME/Server/mongodb/bin"
 #Rvm
 addPath "$HOME/.rvm/bin"
-#portableapps.com/
-addPath "$HOME/.apportable/SDK/bin"
+#PonyDebugger
+addPath "$HOME/Library/PonyDebugger/bin"
 #Heroku
 addPath "/usr/local/heroku/bin"
 #Deployd
