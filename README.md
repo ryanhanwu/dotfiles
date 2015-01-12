@@ -22,7 +22,7 @@ brew install node htop nmap terminal-notifier tmux tree wget imagemagick zsh
 ```
 brew install caskroom/cask/brew-cask
 brew cask install adium skype nally limechat linkinus
-brew cask install coconutbattery alfred appcleaner ccleaner chromecast sizeup firefox omnidisksweeper 
+brew cask install coconutbattery alfred appcleaner ccleaner chromecast spectacle firefox omnidisksweeper 
 brew cask install cyberduck brackets charles cheatsheet robomongo sequel-pro github imageoptim gas-mask
 brew cask install mou namechanger flickr-uploadr joinme
 brew cask install mplayerx handbrake mixxx
