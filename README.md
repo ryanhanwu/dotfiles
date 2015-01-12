@@ -5,8 +5,7 @@ These are dot-files and basic configs of my development machine(Mac) envoronment
 ## Requirement 
 ### Mac Package Management 
 
-#### HomeBrew
-[http://brew.sh/](http://brew.sh/)
+#### [HomeBrew](http://brew.sh/)
 
 ```
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
@@ -18,9 +17,13 @@ brew install git autojump graphicsmagick
 brew install node htop nmap terminal-notifier tmux tree wget imagemagick zsh
 ```
 
-##### Casks
+##### [HomeBrew Cask](http://caskroom.io/)
 ```
 brew install caskroom/cask/brew-cask
+```
+
+##### Cask
+```
 brew cask install adium skype nally limechat linkinus
 brew cask install coconutbattery alfred appcleaner ccleaner chromecast spectacle firefox omnidisksweeper 
 brew cask install cyberduck brackets charles cheatsheet robomongo sequel-pro github imageoptim gas-mask
@@ -30,8 +33,8 @@ brew cask alfred link
 ```
 
 ### Shell
-    
-I use [Oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+I prefer [Oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
     
 ```
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
