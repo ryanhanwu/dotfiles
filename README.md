@@ -8,7 +8,7 @@ These are dot-files and basic configs of my development machine(Mac) envoronment
 #### [HomeBrew](http://brew.sh/)
 
 ```
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 ##### Brews
