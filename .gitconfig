@@ -8,7 +8,6 @@
 	diff = auto
 [core]
 	editor = vim
-	excludesfile = /Users/flyworld/.gitignore
 [alias]
 	st = status
 	ci = commit
