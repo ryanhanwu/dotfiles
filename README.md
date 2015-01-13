@@ -47,14 +47,13 @@ chsh -s /bin/zsh
 Checkout environment repository
 
 ```
-cd ~
-git clone https://github.com/ryanhanwu/dotfiles.git Dotfiles
+git clone https://github.com/ryanhanwu/dotfiles.git ~/Dotfiles
 ```
 
 Create symbolic link and install **Vim** Package with [Vundle](https://github.com/gmarik/Vundle.vim)
 
 ```
-cd ~/Dotfiles && sh init.sh
+sh ~/Dotfiles/init.sh
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
 vim +PluginInstall +qall
 ```
@@ -85,8 +84,7 @@ sudo pip install --upgrade awscli
 Creating the symbolic links after [Package Controll](https://packagecontrol.io/installation) is installed
 
 ```
-cd ~
-git clone https://github.com/ryanhanwu/Sublime-Text-Settings.git
+git clone https://github.com/ryanhanwu/Sublime-Text-Settings.git ~/Sublime-Text-Settings
 ln -s ~/Sublime-Text-Settings/User ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 ```
 * The PackageControl will check the ```Package Controll.sublime-settings``` and ```Installed Packages``` everytime it starts up and automatically installs missing plugins.
