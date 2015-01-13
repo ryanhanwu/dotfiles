@@ -26,7 +26,8 @@ brew install caskroom/cask/brew-cask
 ```
 brew cask install adium skype nally limechat linkinus
 brew cask install coconutbattery alfred appcleaner ccleaner chromecast spectacle firefox omnidisksweeper 
-brew cask install cyberduck brackets charles cheatsheet robomongo sequel-pro github imageoptim gas-mask
+brew cask install cyberduck brackets charles cheatsheet imageoptim gas-mask
+brew cask install robomongo sequel-pro rdm
 brew cask install mou namechanger flickr-uploadr joinme
 brew cask install mplayerx handbrake mixxx
 brew cask alfred link
