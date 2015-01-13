@@ -81,13 +81,12 @@ sudo pip install setuptools --no-use-wheel --upgrade
 sudo pip install --upgrade awscli
 ```
 #### Sublime Text 3
-Creating the symbolic links after ```Package Controll``` is installed
+Creating the symbolic links after [Package Controll](https://packagecontrol.io/installation) is installed
 
 ```
 cd ~
 git clone https://github.com/ryanhanwu/Sublime-Text-Settings.git
 ln -s ~/Sublime-Text-Settings/User ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-ln -s ~/Sublime-Text-Settings/Installed\ Packages ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
 ```
 * The PackageControl will check the ```Package Controll.sublime-settings``` and ```Installed Packages``` everytime it starts up and automatically installs missing plugins.
 
