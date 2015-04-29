@@ -120,6 +120,7 @@ Basic global node packages
 
 ```
 npm install forever nodemon bower puer grunt-cli yo gulp browserify -g
+npm install npm-dep-info -g
 npm install docpad express-generator compound hexo sails -g //Frameworks
 ```
 
