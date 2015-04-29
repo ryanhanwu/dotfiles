@@ -20,6 +20,8 @@ function addPath(){
   export PATH=$PATH:$1
 }
 
+DISABLE_UPDATE_PROMPT=true
+
 alias vizsh="vim ~/.zshrc"
 alias vissh="vim ~/.ssh/config"
 alias vivim="vim ~/.vimrc"
