@@ -53,7 +53,7 @@ git clone https://github.com/ryanhanwu/dotfiles.git ~/Dotfiles
 Create symbolic link and install **Vim** Package with [Vundle](https://github.com/gmarik/Vundle.vim)
 
 ```
-sh ~/Dotfiles/init.sh
+sh ~/dotfiles/init.sh
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
 vim +PluginInstall +qall
 ```
