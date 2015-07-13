@@ -1,5 +1,6 @@
 #!/bin/sh
 set -x
+cd ~/dotfiles/
 ln -s `pwd`/vim ~/.vim
 ln -s `pwd`/vim/vimrc ~/.vimrc
 ln -s `pwd`/.zshrc ~/.zshrc
