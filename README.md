@@ -31,6 +31,7 @@ brew cask install robomongo sequel-pro rdm
 brew cask install mou namechanger flickr-uploadr joinme
 brew cask install mplayerx handbrake mixxx
 brew cask alfred link
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webpquicklook suspicious-package
 ```
 
 ### Shell
