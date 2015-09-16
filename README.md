@@ -13,8 +13,9 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 ##### Brews
 ```
-brew install git autojump graphicsmagick 
-brew install node htop nmap terminal-notifier tmux tree wget imagemagick zsh
+brew install git autojump graphicsmagick archey 
+brew install htop nmap mtr wget 
+brew install node terminal-notifier tmux tree zsh
 ```
 
 ##### [HomeBrew Cask](http://caskroom.io/)
@@ -24,12 +25,26 @@ brew install caskroom/cask/brew-cask
 
 ##### Cask
 ```
-brew cask install adium skype nally limechat linkinus
-brew cask install coconutbattery alfred appcleaner ccleaner chromecast spectacle firefox omnidisksweeper 
-brew cask install cyberduck brackets charles cheatsheet imageoptim gas-mask
-brew cask install robomongo sequel-pro rdm
-brew cask install mou namechanger flickr-uploadr joinme
-brew cask install mplayerx handbrake mixxx
+#Communication
+brew cask install adium skype nally limechat linkinus joinme
+
+#System administration
+brew cask install coconutbattery alfred appcleaner ccleaner chromecast spectacle namechanger omnidisksweeper archey
+
+brew cask install satellite-eyes
+#Development
+brew cask paw brackets mou
+
+#Network 
+brew cask install cyberduck  charles cheatsheet imageoptim gas-mask firefox
+
+#Database Realated
+brew cask install robomongo sequel-pro rdm diffmerge
+
+#Mutimedia
+brew cask install mplayerx handbrake mixxx igetter
+
+#Alfred
 brew cask alfred link
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webpquicklook suspicious-package
 ```
