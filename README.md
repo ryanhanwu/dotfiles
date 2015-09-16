@@ -31,6 +31,7 @@ brew cask install robomongo sequel-pro rdm
 brew cask install mou namechanger flickr-uploadr joinme
 brew cask install mplayerx handbrake mixxx
 brew cask alfred link
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webpquicklook suspicious-package
 ```
 
 ### Shell
@@ -120,6 +121,7 @@ Basic global node packages
 
 ```
 npm install forever nodemon bower puer grunt-cli yo gulp browserify -g
+npm install npm-dep-info -g
 npm install docpad express-generator compound hexo sails -g //Frameworks
 ```
 
