@@ -2,8 +2,8 @@
 
 These are dot-files and basic configs of my development machine(Mac) envoronment, feel free to take and do whatever you want.
 
-## Requirement 
-### Mac Package Management 
+## Requirement
+### Mac Package Management
 
 #### [HomeBrew](http://brew.sh/)
 
@@ -13,8 +13,9 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 ##### Brews
 ```
-brew install git autojump graphicsmagick 
-brew install node htop nmap terminal-notifier tmux tree wget imagemagick zsh
+brew install git autojump graphicsmagick archey
+brew install htop nmap mtr wget
+brew install node terminal-notifier tmux tree zsh
 ```
 
 ##### [HomeBrew Cask](http://caskroom.io/)
@@ -25,20 +26,33 @@ brew tap caskroom/versions
 
 ##### Cask
 ```
-brew cask install adium skype nally limechat linkinus
-brew cask install coconutbattery alfred appcleaner ccleaner chromecast spectacle firefox omnidisksweeper 
-brew cask install cyberduck brackets charles cheatsheet imageoptim gas-mask iterm2
-brew cask install robomongo sequel-pro rdm
-brew cask install mou namechanger flickr-uploadr joinme
-brew cask install mplayerx handbrake mixxx
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webpquicklook suspicious-package
-brew cask install asepsis
+#Communication
+brew cask install adium skype nally limechat linkinus joinme
+
+#System administration
+brew cask install coconutbattery alfred appcleaner ccleaner chromecast spectacle namechanger omnidisksweeper archey
+
+brew cask install satellite-eyes
+#Development
+brew cask paw brackets mou iterm2
+
+#Network
+brew cask install cyberduck  charles cheatsheet imageoptim gas-mask firefox
+
+#Database Realated
+brew cask install robomongo sequel-pro rdm diffmerge
+
+#Mutimedia
+brew cask install mplayerx handbrake mixxx igetter
+
+# System Packages
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webpquicklook suspicious-package asepsis
 ```
 
 ### Shell
 
 I prefer [Oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
-    
+
 ```
 sh -c "$(wget
 https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
@@ -110,7 +124,7 @@ curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh 
 #### Plugins
 * [ColorSense for Xcode](https://github.com/omz/ColorSense-for-Xcode)
 * [ClangFormat-Xcode](https://github.com/travisjeffery/ClangFormat-Xcode.git)
- 
+
 ### Ruby Packages
 
 ```
