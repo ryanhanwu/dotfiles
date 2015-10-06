@@ -20,18 +20,19 @@ brew install node htop nmap terminal-notifier tmux tree wget imagemagick zsh
 ##### [HomeBrew Cask](http://caskroom.io/)
 ```
 brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
 ```
 
 ##### Cask
 ```
 brew cask install adium skype nally limechat linkinus
 brew cask install coconutbattery alfred appcleaner ccleaner chromecast spectacle firefox omnidisksweeper 
-brew cask install cyberduck brackets charles cheatsheet imageoptim gas-mask
+brew cask install cyberduck brackets charles cheatsheet imageoptim gas-mask iterm2
 brew cask install robomongo sequel-pro rdm
 brew cask install mou namechanger flickr-uploadr joinme
 brew cask install mplayerx handbrake mixxx
-brew cask alfred link
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webpquicklook suspicious-package
+brew cask install asepsis
 ```
 
 ### Shell
@@ -39,8 +40,9 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch 
 I prefer [Oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
     
 ```
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-chsh -s /bin/zsh
+sh -c "$(wget
+https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+-O -)"
 ```
 
 
