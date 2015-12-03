@@ -39,7 +39,10 @@ Bundle 'jiangmiao/simple-javascript-indenter'
 Bundle 'tpope/vim-haml'
 Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'jQuery'
+Bundle 'vim-scripts/jade.vim'
 Bundle 'groenewege/vim-less'
+Bundle 'wavded/vim-stylus'
+Bundle 'pangloss/vim-javascript'
 Bundle 'jnwhiteh/vim-golang'
 
 " Ensure vim uses bash
