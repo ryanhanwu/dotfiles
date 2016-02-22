@@ -30,6 +30,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'rking/ag.vim'
 
 " Syntax plugins
+Bundle 'ap/vim-css-color'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'othree/html5-syntax.vim'
 Bundle 'tpope/vim-markdown'
