@@ -9,7 +9,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export COMPLETION_WAITING_DOTS="true"
 
-plugins=(autojump git brew aws rvm copydir copyfile encode64 node osx sublime urltools tmux vagrant xcode pod bower docker nmap)
+plugins=(autojump git brew aws rvm copydir copyfile encode64 node osx sublime urltools tmux vagrant xcode pod meteor docker heroku nmap git-extras git-prompt mvn)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -39,6 +39,18 @@ alias header='curl -I'
 # find out if remote server supports gzip / mod_deflate or not #
 alias headerc='curl -I --compress'
 
+# Kill all running containers.
+alias dockerkillall='docker kill $(docker ps -q)'
+
+# Delete all stopped containers.
+alias dockercleanc='printf "\n>>> Deleting stopped containers\n\n" && docker rm $(docker ps -a -q)'
+
+# Delete all untagged images.
+alias dockercleani='printf "\n>>> Deleting untagged images\n\n" && docker rmi $(docker images -q -f dangling=true)'
+
+# Delete all stopped containers and untagged images.
+alias dockerclean='dockercleanc || true && dockercleani'
+
 #Node.js - NVM and npm
 [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion #https://github.com/creationix/nvm#bash-completion
@@ -64,4 +76,5 @@ addPath "/Applications/Postgres.app/Contents/MacOS/bin"
 addPath "$HOME/LocalProjects/adt-bundle-mac-x86_64/sdk/tools"
 #MAMP PHP
 addPath "/Applications/MAMP/bin/php/php5.5.3/bin"
-
+#Add RVM to PATH for scripting
+addPath "$HOME/.rvm/bin"

@@ -9,7 +9,7 @@
 [core]
 	editor = vim
 	excludesfile = /Users/ryanwu/.gitignore_global
-	pager = bash -lc 'diff-highlight | less -F -R -X -x1,5' -
+	pager = bash -lc 'diff-highlight | diff-so-fancy | less -r'
 [alias]
 	st = status
 	ci = commit
@@ -21,7 +21,7 @@
 	default = matching
 [difftool "diffmerge"]
 	cmd = /usr/local/bin/diffmerge --nosplash \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "diffmerge"]
 	cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 	trustExitCode = true
@@ -29,7 +29,12 @@
 	tool = diffmerge
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[color "diff-highlight"]
+       	oldNormal = "red bold"
+       	oldHighlight = "red bold 52"
+       	newNormal = "green bold"
+       	newHighlight = "green bold 22"
