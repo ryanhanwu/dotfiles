@@ -5,11 +5,11 @@ SHELL="/bin/zsh"
 DISABLE_UPDATE_PROMPT=true
 
 export UPDATE_ZSH_DAYS=14
-export LC_ALL=en_US.UTF-8  
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export COMPLETION_WAITING_DOTS="true"
 
-plugins=(autojump git brew rvm copydir copyfile encode64 node osx sublime urltools tmux vagrant xcode pod)
+plugins=(autojump git brew aws rvm copydir copyfile encode64 node osx sublime urltools tmux vagrant xcode pod bower docker nmap)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -64,3 +64,4 @@ addPath "/Applications/Postgres.app/Contents/MacOS/bin"
 addPath "$HOME/LocalProjects/adt-bundle-mac-x86_64/sdk/tools"
 #MAMP PHP
 addPath "/Applications/MAMP/bin/php/php5.5.3/bin"
+

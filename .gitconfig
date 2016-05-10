@@ -9,6 +9,7 @@
 [core]
 	editor = vim
 	excludesfile = /Users/ryanwu/.gitignore_global
+	pager = bash -lc 'diff-highlight | less -F -R -X -x1,5' -
 [alias]
 	st = status
 	ci = commit
