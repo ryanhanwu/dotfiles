@@ -5,12 +5,11 @@ SHELL="/bin/zsh"
 DISABLE_UPDATE_PROMPT=true
 
 export UPDATE_ZSH_DAYS=14
-export LC_ALL=en_US.UTF-8  
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export COMPLETION_WAITING_DOTS="true"
 
-plugins=(heroku autojump git brew rvm copydir copyfile encode64 node osx sublime urltools tmux vagrant xcode pod meteor docker git-extras git-prompt mvn)
-
+plugins=(autojump git brew aws rvm copydir copyfile encode64 node osx sublime urltools tmux vagrant xcode pod meteor docker heroku nmap git-extras git-prompt mvn)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -77,5 +76,5 @@ addPath "/Applications/Postgres.app/Contents/MacOS/bin"
 addPath "$HOME/LocalProjects/adt-bundle-mac-x86_64/sdk/tools"
 #MAMP PHP
 addPath "/Applications/MAMP/bin/php/php5.5.3/bin"
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#Add RVM to PATH for scripting
+addPath "$HOME/.rvm/bin"

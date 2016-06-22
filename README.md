@@ -14,7 +14,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 ##### Brews
 ```
 brew install git autojump graphicsmagick archey
-brew install htop nmap mtr wget
+brew install htop nmap mtr wget diff-so-fancy 
 brew install node terminal-notifier tmux tree zsh
 ```
 
@@ -34,7 +34,7 @@ brew cask install coconutbattery alfred appcleaner ccleaner chromecast spectacle
 
 brew cask install satellite-eyes
 #Development
-brew cask paw brackets mou iterm2 keycastr
+brew cask install paw mou iterm2 keycastr
 
 #Network
 brew cask install cyberduck  charles cheatsheet imageoptim gas-mask firefox
