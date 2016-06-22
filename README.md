@@ -34,7 +34,7 @@ brew cask install coconutbattery alfred appcleaner ccleaner chromecast spectacle
 
 brew cask install satellite-eyes
 #Development
-brew cask paw brackets mou iterm2
+brew cask paw brackets mou iterm2 keycastr
 
 #Network
 brew cask install cyberduck  charles cheatsheet imageoptim gas-mask firefox
