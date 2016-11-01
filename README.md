@@ -15,7 +15,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 ```
 brew install git autojump graphicsmagick archey
 brew install htop nmap mtr wget diff-so-fancy 
-brew install node terminal-notifier tmux tree zsh
+brew install node terminal-notifier tmux tree zsh docker-compose
 ```
 
 ##### [HomeBrew Cask](http://caskroom.io/)

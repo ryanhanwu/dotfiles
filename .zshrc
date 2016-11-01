@@ -9,7 +9,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export COMPLETION_WAITING_DOTS="true"
 
-plugins=(autojump git brew aws rvm copydir copyfile encode64 node osx sublime urltools tmux vagrant xcode pod meteor docker heroku nmap git-extras git-prompt mvn)
+plugins=(autojump git brew aws copydir copyfile encode64 node osx sublime urltools tmux xcode pod meteor docker heroku nmap git-extras git-prompt mvn)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -21,6 +21,9 @@ function addPath(){
 }
 
 DISABLE_UPDATE_PROMPT=true
+
+export KEY_TC_PROD=~/Dropbox/TC/EdLabOfficialProductionKeyPair.pem
+export KEY_TC_DEV=~/Dropbox/TC/EdLabDefaultDevelopmentKeyPair.pem
 
 alias vizsh="vim ~/.zshrc"
 alias vissh="vim ~/.ssh/config"
