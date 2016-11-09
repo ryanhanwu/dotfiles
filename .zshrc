@@ -83,3 +83,6 @@ addPath "/Applications/MAMP/bin/php/php5.5.3/bin"
 addPath "$HOME/.rvm/bin"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Fix tmux error on Mac OS
+export EVENT_NOKQUEUE=1

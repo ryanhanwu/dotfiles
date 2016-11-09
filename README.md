@@ -14,7 +14,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 ##### Brews
 ```
 brew install git autojump graphicsmagick archey
-brew install htop nmap mtr wget diff-so-fancy 
+brew install htop nmap mtr wget diff-so-fancy
 brew install node terminal-notifier tmux tree zsh docker-compose
 ```
 
@@ -27,10 +27,10 @@ brew tap caskroom/versions
 ##### Cask
 ```
 #Communication
-brew cask install adium skype nally limechat linkinus joinme
+brew cask install adium skype nally joinme
 
 #System administration
-brew cask install coconutbattery alfred appcleaner ccleaner chromecast spectacle namechanger omnidisksweeper archey
+brew cask install coconutbattery alfred appcleaner ccleaner chromecast spectacle namechanger omnidisksweeper
 
 brew cask install satellite-eyes
 #Development
@@ -54,9 +54,7 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch 
 I prefer [Oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 ```
-sh -c "$(wget
-https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
--O -)"
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 ```
 
 
@@ -74,7 +72,10 @@ sh ~/Dotfiles/init.sh
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
 vim +PluginInstall +qall
 ```
-
+Install [**Tmux Plugin Manager**](https://github.com/tmux-plugins/tpm)
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
 
 ### Applications
 ---
@@ -136,9 +137,8 @@ gem install sass
 Basic global node packages
 
 ```
-npm install forever nodemon bower puer grunt-cli yo gulp browserify -g
-npm install npm-dep-info -g
-npm install docpad express-generator compound hexo sails -g //Frameworks
+npm install nodemon bower gulp browserify -g
+npm install webpack hexo sails -g //Frameworks
 ```
 
 ## License
