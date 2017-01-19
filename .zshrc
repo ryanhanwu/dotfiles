@@ -22,6 +22,11 @@ function addPath(){
 
 DISABLE_UPDATE_PROMPT=true
 
+# Fix tmux error on Mac OS
+export EVENT_NOKQUEUE=1
+# PYENV 
+export PYENV_ROOT=/usr/local/var/pyenv
+
 export KEY_TC_PROD=~/Dropbox/TC/EdLabOfficialProductionKeyPair.pem
 export KEY_TC_DEV=~/Dropbox/TC/EdLabDefaultDevelopmentKeyPair.pem
 
@@ -77,12 +82,9 @@ addPath "/usr/local/deployd/bin"
 addPath "/Applications/Postgres.app/Contents/MacOS/bin"
 #Android SDK
 addPath "$HOME/LocalProjects/adt-bundle-mac-x86_64/sdk/tools"
-#MAMP PHP
-addPath "/Applications/MAMP/bin/php/php5.5.3/bin"
 #Add RVM to PATH for scripting
 addPath "$HOME/.rvm/bin"
-
+#Add PHP Pear tool
+addPath "$HOME/pear/bin"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# Fix tmux error on Mac OS
-export EVENT_NOKQUEUE=1
