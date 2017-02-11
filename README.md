@@ -29,15 +29,15 @@ brew tap caskroom/versions
 #Communication
 brew cask install adium skype nally joinme
 
-#System administration
-brew cask install coconutbattery alfred appcleaner ccleaner chromecast spectacle namechanger omnidisksweeper
+#System 
+brew cask install coconutbattery alfred appcleaner ccleaner chromecast spectacle namechanger omnidisksweeper clipmenu
 
 brew cask install satellite-eyes
 #Development
-brew cask install paw mou iterm2 keycastr
+brew cask install mou iterm2 keycastr
 
 #Network
-brew cask install cyberduck  charles cheatsheet imageoptim gas-mask firefox
+brew cask install cyberduck cheatsheet imageoptim gas-mask firefox
 
 #Database Realated
 brew cask install robomongo sequel-pro rdm diffmerge
