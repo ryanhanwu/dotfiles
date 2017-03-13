@@ -1,5 +1,5 @@
 [user]
-	name = Ryan Wu
+	name = Ryan
 	email = hello@ryanwu.me
 [color]
 	interactive = auto
@@ -11,6 +11,7 @@
 	excludesfile = /Users/ryanwu/.gitignore_global
 	pager = bash -lc 'diff-highlight | diff-so-fancy | less -r'
 [alias]
+    rbr = remote update origin --prune
 	st = status
 	ci = commit
 	co = checkout
@@ -41,3 +42,5 @@
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
+[commit]
+	template = /Users/ryanwu/.stCommitMsg
