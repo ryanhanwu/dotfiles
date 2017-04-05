@@ -1,4 +1,4 @@
-#Dotfiles
+# Dotfiles
 
 These are dot-files and basic configs of my development machine(Mac) envoronment, feel free to take and do whatever you want.
 
@@ -20,16 +20,16 @@ brew install node terminal-notifier tmux tree zsh docker-compose
 
 ##### [HomeBrew Cask](http://caskroom.io/)
 ```
-brew install caskroom/cask/brew-cask
+brew tap caskroom/cask
 brew tap caskroom/versions
 ```
 
 ##### Cask
 ```
-#Communication
+# Communication
 brew cask install adium skype nally joinme
 
-#System 
+# System 
 brew cask install coconutbattery alfred appcleaner ccleaner chromecast spectacle namechanger omnidisksweeper clipmenu
 
 brew cask install satellite-eyes
