@@ -15,7 +15,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 ```
 brew install git autojump graphicsmagick archey
 brew install htop nmap mtr wget diff-so-fancy
-brew install node terminal-notifier tmux tree zsh docker-compose
+brew install node terminal-notifier tmux tree zsh docker-compose ack ripgrep 
 ```
 
 ##### [HomeBrew Cask](http://caskroom.io/)
@@ -30,11 +30,13 @@ brew tap caskroom/versions
 brew cask install adium skype nally joinme
 
 # System 
-brew cask install coconutbattery alfred appcleaner ccleaner chromecast spectacle namechanger omnidisksweeper clipmenu
+brew cask install coconutbattery alfred appcleaner ccleaner chromecast spectacle namechanger 
+omnidisksweeper 
 
 brew cask install satellite-eyes
+
 #Development
-brew cask install mou iterm2 keycastr
+brew cask install mou iterm2 keycastr clipmenu macdown
 
 #Network
 brew cask install cyberduck cheatsheet imageoptim gas-mask firefox
