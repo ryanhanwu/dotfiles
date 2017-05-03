@@ -119,28 +119,11 @@ ln -s ~/Sublime-Text-Settings/User ~/Library/Application\ Support/Sublime\ Text\
 ---
 * After install XCode
 
-##### Install Alcatraz
-```
-curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
-```
-
-#### Plugins
-* [ColorSense for Xcode](https://github.com/omz/ColorSense-for-Xcode)
-* [ClangFormat-Xcode](https://github.com/travisjeffery/ClangFormat-Xcode.git)
-
-### Ruby Packages
-
-```
-rvm use system
-gem install sass
-```
-
 ### Node.js Packages
 Basic global node packages
 
 ```
-npm install nodemon bower gulp browserify -g
-npm install webpack hexo sails -g //Frameworks
+npm install webpack hexo -g //Frameworks
 ```
 
 ## License
