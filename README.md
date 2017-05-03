@@ -48,7 +48,7 @@ brew cask install robomongo sequel-pro rdm diffmerge
 brew cask install mplayerx handbrake mixxx igetter
 
 # System Packages
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webpquicklook suspicious-package asepsis
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webpquicklook 
 ```
 
 ### Shell
