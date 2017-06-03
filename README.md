@@ -1,6 +1,6 @@
 # Dotfiles
 
-These are dot-files and basic configs of my development machine(Mac) envoronment, feel free to take and do whatever you want.
+These are dot-files and basic configs of my development Mac, feel free to use and do whatever you want.
 
 ## Requirement
 ### Mac Package Management
@@ -33,32 +33,32 @@ brew cask install adium skype nally joinme
 brew cask install coconutbattery alfred appcleaner ccleaner chromecast spectacle namechanger 
 omnidisksweeper 
 
+# Laptop only
 brew cask install satellite-eyes
 
-#Development
+# Development
 brew cask install mou iterm2 keycastr clipmenu macdown
 
-#Network
+# Network
 brew cask install cyberduck cheatsheet imageoptim gas-mask firefox
 
-#Database Realated
+# Database Realated
 brew cask install robomongo sequel-pro rdm diffmerge
 
-#Mutimedia
+# Mutimedia
 brew cask install mplayerx handbrake mixxx igetter
 
 # System Packages
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webpquicklook 
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webpquicklook reattach-to-user-namespace
 ```
 
 ### Shell
 
-I prefer [Oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
+Based on [Oh my zsh](https://github.com/robbyrussell/oh-my-zsh) with some customization at **.zshrc**
 
 ```
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 ```
-
 
 ## Basic Config
 Checkout environment repository
@@ -82,11 +82,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ### Applications
 ---
 #### CLI Tools
-[RVM](http://rvm.io/)
-
-```
-\curl -sSL https://get.rvm.io | bash -s stable
-```
 
 [NVM](https://github.com/creationix/nvm)
 
@@ -112,21 +107,16 @@ ln -s ~/Sublime-Text-Settings/User ~/Library/Application\ Support/Sublime\ Text\
 
 #### Utilities
 
-* [Deployd](http://deployd.com/)
 * [Heroku](https://toolbelt.herokuapp.com/)
 
-### iOS Development Packages
----
-* After install XCode
+### iOS Development
+```
+gem install cocoapods
+```
 
 ### Node.js Packages
 Basic global node packages
 
 ```
-npm install webpack hexo -g //Frameworks
+npm install hexo -g //Blog
 ```
-
-## License
-
-MIT: http://ryanwu.mit-license.org
-
