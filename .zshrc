@@ -9,9 +9,10 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export COMPLETION_WAITING_DOTS="true"
 
-plugins=(autojump git brew aws rvm copydir copyfile encode64 node osx sublime urltools tmux xcode pod meteor docker heroku nmap git-extras git-prompt mvn)
+plugins=(autojump git brew common-aliases zsh-autosuggestions copydir copyfile encode64 node osx sublime tmux xcode pod docker heroku nmap git-extras git-prompt mvn yarn)
 
 source $ZSH/oh-my-zsh.sh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #System basic pth
 export PATH=~/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:$PATH
@@ -24,9 +25,9 @@ DISABLE_UPDATE_PROMPT=true
 
 # Fix tmux error on Mac OS
 export EVENT_NOKQUEUE=1
+
 # PYENV 
 export PYENV_ROOT=/usr/local/var/pyenv
-
 export KEY_TC_PROD=~/Dropbox/TC/EdLabOfficialProductionKeyPair.pem
 export KEY_TC_DEV=~/Dropbox/TC/EdLabDefaultDevelopmentKeyPair.pem
 
@@ -59,12 +60,28 @@ alias dockercleani='printf "\n>>> Deleting untagged images\n\n" && docker rmi $(
 # Delete all stopped containers and untagged images.
 alias dockerclean='dockercleanc || true && dockercleani'
 
-#Node.js - NVM and npm
-[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh
-[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion #https://github.com/creationix/nvm#bash-completion
-. <(npm completion) #https://npmjs.org/doc/completion.html
-nvm use default
+# Lazyload Node.js - NVM and npm
+lazynvm() {
+  unset -f nvm node npm
+  export NVM_DIR=~/.nvm
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+  nvm use default
+}
 
+nvm() {
+  lazynvm 
+  nvm $@
+}
+ 
+node() {
+  lazynvm
+  node $@
+}
+ 
+npm() {
+  lazynvm
+  npm $@
+}
 #autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
