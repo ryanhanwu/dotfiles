@@ -29,7 +29,7 @@ sh ./init.sh
 * Vim [plugins & settings](https://github.com/ryanhanwu/dotfiles/blob/master/vim/vimrc) through [Vundle]()
 * Mac HomeBrew [settings](https://github.com/ryanhanwu/dotfiles/blob/master/Brewfile) through [Brewbundle](https://github.com/Homebrew/homebrew-bundle)
 * System Node.js and [NVM](https://github.com/creationix/nvm)
-* Tmux config through [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
+* Tmux [config](https://github.com/ryanhanwu/dotfiles/blob/master/.tmux.conf) through [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 
 #### Sublime Text 3
 Creating the symbolic links after [Package Controll](https://packagecontrol.io/installation) is installed
