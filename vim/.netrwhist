@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/ryanwu/Sublime-Text-Settings/.git'
-let g:netrw_dirhist_2='/Users/ryanwu/.atom/packages'
-let g:netrw_dirhist_3='/Users/ryanwu/.atom/packages/atom-beautify'

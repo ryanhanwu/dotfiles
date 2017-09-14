@@ -9,25 +9,40 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export COMPLETION_WAITING_DOTS="true"
 
+# Plugins
 plugins=(autojump git brew common-aliases zsh-autosuggestions copydir copyfile encode64 node osx sublime tmux xcode pod docker heroku nmap git-extras git-prompt mvn yarn)
 
 source $ZSH/oh-my-zsh.sh
+## zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+## Autojump
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
-#System basic pth
-export PATH=~/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:$PATH
+# Add Path
+## Basic
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:$PATH
 
 function addPath(){
-  export PATH=$PATH:$1
+  test -e $1 && export PATH=$PATH:$1 && echo "Path added" $1
 }
 
-DISABLE_UPDATE_PROMPT=true
+## Add Home Bin
+addPath "$HOME/bin"
+addPath "$HOME/.bin"
+## Add RVM to PATH for scripting
+addPath "$HOME/.rvm/bin"
+## Add Python2 to PATH
+addPath "/usr/local/opt/python/libexec/bin"
+## Add PHP Pear tool
+addPath "$HOME/pear/bin"
 
 # Fix tmux error on Mac OS
 export EVENT_NOKQUEUE=1
 
-# PYENV 
+# PYENV
 export PYENV_ROOT=/usr/local/var/pyenv
+
+# KEY
 export KEY_TC_PROD=~/Dropbox/TC/EdLabOfficialProductionKeyPair.pem
 export KEY_TC_DEV=~/Dropbox/TC/EdLabDefaultDevelopmentKeyPair.pem
 
@@ -69,39 +84,18 @@ lazynvm() {
 }
 
 nvm() {
-  lazynvm 
+  lazynvm
   nvm $@
 }
- 
+
 node() {
   lazynvm
   node $@
 }
- 
+
 npm() {
   lazynvm
   npm $@
 }
-#autojump
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
-#MongoDb
-addPath "$HOME/Server/mongodb/bin"
-#Rvm
-addPath "$HOME/.rvm/bin"
-#PonyDebugger
-addPath "$HOME/Library/PonyDebugger/bin"
-#Heroku
-addPath "/usr/local/heroku/bin"
-#Deployd
-addPath "/usr/local/deployd/bin"
-#Postgres Db
-addPath "/Applications/Postgres.app/Contents/MacOS/bin"
-#Android SDK
-addPath "$HOME/LocalProjects/adt-bundle-mac-x86_64/sdk/tools"
-#Add RVM to PATH for scripting
-addPath "$HOME/.rvm/bin"
-#Add PHP Pear tool
-addPath "$HOME/pear/bin"
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
+test -e "${HOME}/.iterm2.zsh" && source "${HOME}/.iterm2.zsh"
