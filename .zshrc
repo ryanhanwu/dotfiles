@@ -23,7 +23,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/local/bin:/opt/local/sbin:/bin:/usr/sbin:/sbin:$PATH
 
 function addPath(){
-  test -e $1 && export PATH=$PATH:$1 && echo "Path added" $1
+  test -e $1 && export PATH=$PATH:$1
 }
 
 ## Add Home Bin
