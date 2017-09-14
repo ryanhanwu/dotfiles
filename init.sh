@@ -7,8 +7,8 @@ fi
 brew update
 
 echo "Install Homebrew Packages"
-#brew tap homebrew/bundle
-#brew bundle
+brew tap homebrew/bundle
+brew bundle
 
 echo "Create dotfile links"
 ln -s `pwd`/vim ~/.vim
