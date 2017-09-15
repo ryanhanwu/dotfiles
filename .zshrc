@@ -74,6 +74,7 @@ alias dockercleani='printf "\n>>> Deleting untagged images\n\n" && docker rmi $(
 
 # Delete all stopped containers and untagged images.
 alias dockerclean='dockercleanc || true && dockercleani'
+alias weather='curl -4 http://wttr.in'
 
 # Lazyload Node.js - NVM and npm
 lazynvm() {

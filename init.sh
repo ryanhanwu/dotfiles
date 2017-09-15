@@ -24,7 +24,7 @@ echo "~/.gitignore_global linked"
 ln -s `pwd`/.tmux.conf ~/.tmux.conf
 echo "~/.tmux.conf linked"
 ln -s `pwd`/.iterm2.zsh ~/.iterm2.zsh
-echo "~/.tmux.conf linked"
+echo "~/.iterm2.zsh linked"
 ln -s `pwd`/.screenrc ~/.screenrc
 echo "~/.screenrc linked"
 
