@@ -13,6 +13,7 @@ brew 'autojump'
 brew 'zsh'
 brew 'zsh-completions'
 brew 'tmux'
+brew 'reattach-to-user-namespace'
 brew 'docker-compose'
 brew 'ack'
 brew 'ripgrep'
@@ -75,14 +76,14 @@ cask 'ngrok'
 cask 'imageoptim'
 cask 'iterm2'
 cask 'shuttle'
-cask 'reattach-to-user-namespace'
+
 cask 'sequel-pro'
 cask 'robomongo'
 cask 'diffmerge'
-cask 'gpgtools'
+cask 'gpg-suite'
 
 ## Multimedia
-cask 'chromecast'
+cask 'mkchromecast'
 cask 'satellite-eyes'
 cask 'aerial'
 cask 'handbrake'
@@ -91,17 +92,24 @@ cask 'mixxx'
 cask 'igetter'
 
 # Finder Quicklook
+# https://github.com/sindresorhus/quick-look-plugins
+# http://www.quicklookplugins.com/
 cask 'qlcolorcode'
+cask 'qlstephen'
 cask 'qlmarkdown'
 cask 'quicklook-json'
-cask 'qlprettypatch'
-cask 'quicklook-csv'
-cask 'betterzipql'
+cask 'qlimagesize'
 cask 'webpquicklook'
-cask 'qlstephen'
+cask 'suspicious-package'
+cask 'quicklookase'
+cask 'qlvideo'
+cask 'provisionql'
+cask 'quicklookapk'
+cask 'quicklook-csv' #++
+cask 'jupyter-notebook-ql' #++
 
 # Fonts
-cask 'font-sauce-code-powerline'
+cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
 cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
