@@ -25,8 +25,6 @@ ln -s `pwd`/.tmux.conf ~/.tmux.conf
 echo "~/.tmux.conf linked"
 ln -s `pwd`/.iterm2.zsh ~/.iterm2.zsh
 echo "~/.iterm2.zsh linked"
-ln -s `pwd`/.screenrc ~/.screenrc
-echo "~/.screenrc linked"
 
 #Show Library folder
 chflags nohidden ~/Library
@@ -46,7 +44,7 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
 vim +PluginInstall +qall
 
 # Install Tmux Plugin Manager
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# https://github.com/gpakosz/.tmux
 
 # Install Node nvm
 git clone https://github.com/creationix/nvm.git ~/.nvm
