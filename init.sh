@@ -49,7 +49,6 @@ function symlink()
 #   fi
 # }
 symlink .zshrc
-symlink .vim
 symlink .vimrc
 symlink .gitconfig
 symlink .gitignore_global
