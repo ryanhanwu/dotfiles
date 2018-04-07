@@ -10,7 +10,7 @@ export LANG=en_US.UTF-8
 export COMPLETION_WAITING_DOTS="true"
 
 # Plugins
-plugins=(autojump git brew common-aliases zsh-autosuggestions copydir copyfile encode64 node osx sublime tmux xcode pod docker heroku nmap git-extras git-prompt mvn yarn)
+plugins=(autojump git git-extras git-prompt brew common-aliases zsh-autosuggestions copydir copyfile encode64 node osx sublime tmux xcode pod docker heroku nmap vagrant mvn yarn)
 
 source $ZSH/oh-my-zsh.sh
 ## zsh-syntax-highlighting

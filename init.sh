@@ -1,31 +1,76 @@
-#!/bin/sh
+#!/bin/bash
 
-echo "Installing Homebrew"
-if test ! $(which brew); then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-brew update
+# -z: Returns true if the length of string is zero
+# -e: Returns true if file exists (regular file, directory, or symlink)
+# -f: Returns true if file exists and is a regular file
+# -d: Returns true if file exists and is a directory
+# -h: Returns true if file exists and is a symlink
 
-echo "Install Homebrew Packages"
-brew tap homebrew/bundle
-brew bundle
+# if test ! $(which brew); then
+#   echo $'\e[1;37mHomebrew\e[0m: Installing...'
+#   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# else
+#   echo $'\e[1;37mHomebrew\e[0m: Skippped, already installed'
+# fi
+# brew update
 
-echo "Create dotfile links"
-ln -s `pwd`/vim ~/.vim
-echo "~/.vim folder linked"
-ln -s `pwd`/vim/vimrc ~/.vimrc
-echo "~/.vimrc linked"
-ln -s `pwd`/.zshrc ~/.zshrc
-echo "~/.zshrc linked"
-ln -s `pwd`/.gitconfig ~/.gitconfig
-echo "~/.gitconfig linked"
-ln -s `pwd`/.gitignore_global ~/.gitignore_global
-echo "~/.gitignore_global linked"
-ln -s `pwd`/.tmux.conf ~/.tmux.conf
-echo "~/.tmux.conf linked"
-ln -s `pwd`/.iterm2.zsh ~/.iterm2.zsh
-echo "~/.iterm2.zsh linked"
+# echo $'\e[1;37mHomebrew\e[0m: Updating packages...'
+# brew tap homebrew/bundle
+# brew bundle
 
+function symlink()
+{
+  answer=N
+  src=`pwd`/$1
+  target=`echo ~/$1`
+  if [ -h $target ]; then
+    echo "$target is a symbolic link already"
+    read -t 15 -p $'\e[0;32mDo you want to override it? (Y/n)\e[0m ' answer
+  elif [ -f $target ]; then
+    echo "$target is a file link already"
+    read -t 15 -p $'\e[0;32mDo you want to override it? (Y/n)\e[0m ' answer
+  else
+    answer=Y
+  fi
+  if [[ $answer =~ ^(y|Y) ]]; then
+
+    ln -sf $src $target
+    echo -e -n $'\e[1;37m'$target$'\e[0m --> '$src"\n\n"
+  fi
+}
+# function cloneUpdate()
+# {
+#   folder=`pwd`/$1
+#   if [ -d $folder ]; then
+#     cd $folder
+#     git pull
+#   else
+#     git clone https://github.com/creationix/nvm. $folder
+#   fi
+# }
+symlink .zshrc
+symlink .vim
+symlink .vimrc
+symlink .gitconfig
+symlink .gitignore_global
+symlink .iterm2.zsh
+
+
+echo "Installing Tmux Plugin Manager from https://github.com/gpakosz/.tmux"
+(
+  folder=~/.tmux
+  if [ -d $folder ]; then
+    cd $folder
+    git pull
+  else
+    git clone https://github.com/gpakosz/.tmux.git $folder
+  fi
+  ln -s -f ~/.tmux/.tmux.conf ~/
+  cp ~/.tmux/.tmux.conf.local ~/
+)
+
+
+echo "Config Mac"
 #Show Library folder
 chflags nohidden ~/Library
 #Show hidden files
@@ -36,15 +81,37 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 
 # Install Oh My Zsh
-chsh -s $(which zsh)
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+(
+  folder=~/.oh-my-zsh
+  if [ -d $folder ]; then
+    cd $folder
+    git pull
+  else
+    chsh -s $(which zsh)
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  fi
+)
 
 # Install Vim Settings through Vundle
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
+(
+  folder=~/.vim/bundle/vundle
+  if [ -d $folder ]; then
+    cd $folder
+    git pull
+  else
+    git clone https://github.com/gmarik/Vundle.vim.git $folder
+  fi
+)
+
 vim +PluginInstall +qall
 
-# Install Tmux Plugin Manager
-# https://github.com/gpakosz/.tmux
-
-# Install Node nvm
-git clone https://github.com/creationix/nvm.git ~/.nvm
+echo "Install Node nvm with lazynvm"
+(
+  folder=~/.nvm
+  if [ -d $folder ]; then
+    cd $folder
+    git pull
+  else
+    git clone https://github.com/creationix/nvm. $folder
+  fi
+)

@@ -75,7 +75,7 @@ cask 'ngrok'
 cask 'imageoptim'
 cask 'iterm2'
 cask 'shuttle'
-
+cask 'vagrant'
 cask 'sequel-pro'
 cask 'robo-3t'
 cask 'diffmerge'
