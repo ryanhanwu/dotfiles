@@ -28,6 +28,14 @@ echo "~/.iterm2.zsh linked"
 ln -s `pwd`/.screenrc ~/.screenrc
 echo "~/.screenrc linked"
 
+#Show Library folder
+chflags nohidden ~/Library
+#Show hidden files
+defaults write com.apple.finder AppleShowAllFiles YES
+#Show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+#Show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
 
 # Install Oh My Zsh
 chsh -s $(which zsh)
@@ -42,5 +50,3 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Install Node nvm
 git clone https://github.com/creationix/nvm.git ~/.nvm
-# Install global NPM packages
-npm install --global yarn

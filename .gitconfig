@@ -9,7 +9,7 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
-	pager = bash -lc 'diff-highlight | diff-so-fancy | less -r'
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [alias]
 	st = status
 	ci = commit
@@ -60,5 +60,3 @@
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
-[commit]
-	template = /Users/ryanwu/.stCommitMsg

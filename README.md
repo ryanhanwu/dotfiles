@@ -19,7 +19,6 @@ sh ./init.sh
 * `~/.gitconfig`
 * `~/.gitignore_global`
 * `~/.tmux`
-* `~/.tmux`
 * `~/.screenrc`
 
 

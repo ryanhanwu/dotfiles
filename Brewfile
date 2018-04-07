@@ -3,7 +3,6 @@ tap 'caskroom/cask'
 tap 'caskroom/fonts'
 tap 'caskroom/versions'
 tap 'homebrew/bundle'
-tap 'homebrew/dupes'
 
 # Install CLI Tools
 ## Shell Utilities
@@ -78,7 +77,7 @@ cask 'iterm2'
 cask 'shuttle'
 
 cask 'sequel-pro'
-cask 'robomongo'
+cask 'robo-3t'
 cask 'diffmerge'
 cask 'gpg-suite'
 
