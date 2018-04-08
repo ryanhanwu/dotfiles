@@ -11,30 +11,21 @@ git clone https://github.com/ryanhanwu/dotfiles.git && cd dotfiles
 sh ./init.sh
 ```
 
-## What's installed? 
+## What's installed?
 ### Linked Dotfiles
-* `~/.vim`
-* `~/.vimrc`
-* `~/.zshrc`
 * `~/.gitconfig`
 * `~/.gitignore_global`
+* `./.iterm2.zsh`
 * `~/.tmux`
-* `~/.screenrc`
+* `~/.vimrc`
+* `~/.zshrc`
 
 
 ### Configurations
 
 * Shell [plugins&configurations](https://github.com/ryanhanwu/dotfiles/blob/master/.zshrc) through [Oh My Zsh]()
-* Vim [plugins & settings](https://github.com/ryanhanwu/dotfiles/blob/master/vim/vimrc) through [Vundle]()
+* Vim [plugins & settings](https://github.com/ryanhanwu/dotfiles/blob/master/.vimrc) through [Vundle]()
 * Mac HomeBrew [settings](https://github.com/ryanhanwu/dotfiles/blob/master/Brewfile) through [Brewbundle](https://github.com/Homebrew/homebrew-bundle)
 * System Node.js and [NVM](https://github.com/creationix/nvm)
-* Tmux [config](https://github.com/ryanhanwu/dotfiles/blob/master/.tmux.conf) through [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
-
-#### Sublime Text 3
-Creating the symbolic links after [Package Controll](https://packagecontrol.io/installation) is installed
-
-```
-git clone https://github.com/ryanhanwu/Sublime-Text-Settings.git ~/Sublime-Text-Settings
-ln -s ~/Sublime-Text-Settings/User ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-```
-* The PackageControl will check the ```Package Controll.sublime-settings``` and ```Installed Packages``` everytime it starts up and automatically installs missing plugins.
+* Tmux [Oh My Tmux!](https://github.com/gpakosz/.tmux.git)
+* Sublime Text 3 [My own settings](https://github.com/ryanhanwu/Sublime-Text-Settings.git)

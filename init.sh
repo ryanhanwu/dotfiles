@@ -6,6 +6,7 @@
 # -d: Returns true if file exists and is a directory
 # -h: Returns true if file exists and is a symlink
 
+
 if test ! $(which brew); then
   echo $'\e[1;37mHomebrew\e[0m: Installing...'
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -17,6 +18,7 @@ brew update
 echo $'\e[1;37mHomebrew\e[0m: Updating packages...'
 brew tap homebrew/bundle
 brew bundle
+
 function cloneOrUpdate()
 {
   folder=$1
@@ -29,6 +31,7 @@ function cloneOrUpdate()
   fi
 }
 
+exit
 function symlink()
 {
   answer=N
@@ -52,12 +55,22 @@ function symlink()
 function check() {
   echo -n $'\342\234\223 '
 }
-# symlink .zshrc
-# symlink .vimrc
-# symlink .gitconfig
-# symlink .gitignore_global
-# symlink .iterm2.zsh
+symlink .zshrc
+symlink .vimrc
+symlink .gitconfig
+symlink .gitignore_global
+symlink .iterm2.zsh
 
+echo -e $'\e[1;37mInstalling Sublime-Text Settings\e[0m'
+(
+  cloneOrUpdate ~/Sublime-Text-Settings https://github.com/ryanhanwu/Sublime-Text-Settings.git
+  configPath=~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+  if [ -e "$configPath" ]; then
+    echo Skipped. Another configs were created at $configPath
+  else
+    echo ln -fs ~/Sublime-Text-Settings/User $configPath
+  fi
+)
 
 echo "Installing Tmux Plugin Manager from https://github.com/gpakosz/.tmux"
 (
