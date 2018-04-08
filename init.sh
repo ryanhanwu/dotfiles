@@ -6,17 +6,28 @@
 # -d: Returns true if file exists and is a directory
 # -h: Returns true if file exists and is a symlink
 
-# if test ! $(which brew); then
-#   echo $'\e[1;37mHomebrew\e[0m: Installing...'
-#   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-# else
-#   echo $'\e[1;37mHomebrew\e[0m: Skippped, already installed'
-# fi
-# brew update
+if test ! $(which brew); then
+  echo $'\e[1;37mHomebrew\e[0m: Installing...'
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+  echo $'\e[1;37mHomebrew\e[0m: Skippped, already installed'
+fi
+brew update
 
-# echo $'\e[1;37mHomebrew\e[0m: Updating packages...'
-# brew tap homebrew/bundle
-# brew bundle
+echo $'\e[1;37mHomebrew\e[0m: Updating packages...'
+brew tap homebrew/bundle
+brew bundle
+function cloneOrUpdate()
+{
+  folder=$1
+  if [ -d $folder ]; then
+    # echo Found $folder
+    cd $folder
+    git pull
+  else
+    git clone $2 $folder
+  fi
+}
 
 function symlink()
 {
@@ -38,48 +49,35 @@ function symlink()
     echo -e -n $'\e[1;37m'$target$'\e[0m --> '$src"\n\n"
   fi
 }
-# function cloneUpdate()
-# {
-#   folder=`pwd`/$1
-#   if [ -d $folder ]; then
-#     cd $folder
-#     git pull
-#   else
-#     git clone https://github.com/creationix/nvm. $folder
-#   fi
-# }
-symlink .zshrc
-symlink .vimrc
-symlink .gitconfig
-symlink .gitignore_global
-symlink .iterm2.zsh
+function check() {
+  echo -n $'\342\234\223 '
+}
+# symlink .zshrc
+# symlink .vimrc
+# symlink .gitconfig
+# symlink .gitignore_global
+# symlink .iterm2.zsh
 
 
 echo "Installing Tmux Plugin Manager from https://github.com/gpakosz/.tmux"
 (
-  folder=~/.tmux
-  if [ -d $folder ]; then
-    cd $folder
-    git pull
-  else
-    git clone https://github.com/gpakosz/.tmux.git $folder
-  fi
+  cloneOrUpdate ~/.tmux https://github.com/gpakosz/.tmux.git
   ln -s -f ~/.tmux/.tmux.conf ~/
   cp ~/.tmux/.tmux.conf.local ~/
 )
 
-
-echo "Config Mac"
-#Show Library folder
+echo -e $'\e[1;37mConfiging Mac...\e[0m'
+check && echo Show '~/Library' folder
 chflags nohidden ~/Library
-#Show hidden files
+check && echo Show hidden files
 defaults write com.apple.finder AppleShowAllFiles YES
-#Show path bar
+check && echo Show path bar
 defaults write com.apple.finder ShowPathbar -bool true
-#Show status bar
+check && echo Show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
 
-# Install Oh My Zsh
+
+echo -e $'\e[1;37mInstalling Oh My Zsh\e[0m'
 (
   folder=~/.oh-my-zsh
   if [ -d $folder ]; then
@@ -91,26 +89,13 @@ defaults write com.apple.finder ShowStatusBar -bool true
   fi
 )
 
-# Install Vim Settings through Vundle
+echo -e $'\e[1;37mInstalling Vim plugins\e[0m'
 (
-  folder=~/.vim/bundle/vundle
-  if [ -d $folder ]; then
-    cd $folder
-    git pull
-  else
-    git clone https://github.com/gmarik/Vundle.vim.git $folder
-  fi
+  cloneOrUpdate ~/.vim/bundle/vundle https://github.com/gmarik/Vundle.vim.git
+  vim +PluginInstall +qall
 )
 
-vim +PluginInstall +qall
-
-echo "Install Node nvm with lazynvm"
+echo -e $'\e[1;37mInstalling NVM\e[0m'
 (
-  folder=~/.nvm
-  if [ -d $folder ]; then
-    cd $folder
-    git pull
-  else
-    git clone https://github.com/creationix/nvm. $folder
-  fi
+  cloneOrUpdate ~/.nvm https://github.com/creationix/nvm.git
 )
