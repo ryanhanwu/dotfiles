@@ -75,7 +75,12 @@ check && echo Show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 check && echo Show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
-
+check && echo Allow quitting Finder via ⌘ + Q; doing so will also hide desktop icons
+defaults write com.apple.finder QuitMenuItem -bool true
+check && echo Update OS daily
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+check && echo Avoid creating .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 echo -e $'\e[1;37mInstalling Oh My Zsh\e[0m'
 (
