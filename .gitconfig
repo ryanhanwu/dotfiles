@@ -6,6 +6,7 @@
 	status = auto
 	branch = auto
 	diff = auto
+	ui = auto
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
@@ -15,6 +16,9 @@
 	ci = commit
 	co = checkout
 	br = branch
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
 	rbr = remote update origin --prune
 	#Latest commit w/ contet
 	last = log -1 -U
