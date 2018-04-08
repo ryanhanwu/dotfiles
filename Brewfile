@@ -6,60 +6,89 @@ tap 'homebrew/bundle'
 
 # Install CLI Tools
 ## Shell Utilities
-brew 'coreutils'
-brew 'findutils'
+brew 'ack'
+brew 'ag'
 brew 'autojump'
+brew 'coreutils'
+brew 'docker-compose'
+brew 'findutils'
+brew 'jq'
+brew 'reattach-to-user-namespace'
+brew 'ripgrep'
+brew 'tmux'
 brew 'zsh'
 brew 'zsh-completions'
-brew 'tmux'
-brew 'reattach-to-user-namespace'
-brew 'docker-compose'
-brew 'ack'
-brew 'ripgrep'
 brew 'zsh-syntax-highlighting'
 
 ## Network Utilities
 brew 'htop'
-brew 'nmap'
 brew 'mtr'
+brew 'netcat' #Networking utility for the TCP/IP protocol.
+brew 'nmap'
 brew 'wget'
+brew 'nginx'
 
 ## System Utilities
 brew 'archey'
-brew 'terminal-notifier'
-brew 'tree'
 brew 'mackup'
 brew 'mas'
+brew 'ncdu'
+brew 'terminal-notifier'
 brew 'trash'
+brew 'tree'
+brew 'unrar'
+brew 'watch'
+
+## Multimedia
+brew 'graphicsmagick'
 
 ## Dev Utilities
-brew 'diff-so-fancy'
-brew 'heroku-toolbelt'
-brew 'git'
 brew 'awscli'
-brew 'w3m'
+brew 'diff-so-fancy'
+brew 'git'
+brew 'heroku-toolbelt'
 brew 'node'
+brew 'w3m'
+brew 'macvim'
+
+## Other
+## Fish shell.
+# brew 'fish'
+# Mobile Shell (MOSH) is like SSH plus roaming and smart echo.
+# brew 'mosh'
 
 # Mac Apps
+## Entertainment
+cask 'spotify'
+cask 'vlc'
+
+## Browsers
+cask 'firefox'
+cask 'google-chrome'
+cask 'google-chrome-canary'
+cask 'opera'
+
 ## Communication
 cask 'slack'
 cask 'skype'
 
 ## Productivity
 cask 'alfred'
-cask 'go2shell'
-cask 'docker'
-cask 'google-chrome'
-cask 'spectacle'
-cask 'rdm'
-cask 'keycastr'
-cask 'clipy'
 cask 'cheatsheet'
+cask 'clipy'
+cask 'docker'
+brew 'docker-compose'
+brew 'docker-machine'
+cask 'go2shell'
+cask 'keycastr'
+cask 'lastpass'
+cask 'spectacle'
 
 ## System
-cask 'coconutbattery'
 cask 'appcleaner'
 cask 'ccleaner'
+cask 'coconutbattery'
+cask 'flux'
 cask 'namechanger'
 cask 'omnidisksweeper'
 
@@ -67,19 +96,21 @@ cask 'omnidisksweeper'
 cask 'sublime-text'
 cask 'macdown'
 
+## Services
+cask 'mongodb'
+
 ## Development
-cask 'microsoft-remote-desktop-beta'
+cask 'diffmerge'
 cask 'gas-mask'
-cask 'firefox'
-cask 'ngrok'
+cask 'gpg-suite'
 cask 'imageoptim'
 cask 'iterm2'
+cask 'microsoft-remote-desktop-beta'
+cask 'ngrok'
+cask 'robo-3t'
+cask 'sequel-pro'
 cask 'shuttle'
 cask 'vagrant'
-cask 'sequel-pro'
-cask 'robo-3t'
-cask 'diffmerge'
-cask 'gpg-suite'
 
 ## Multimedia
 cask 'mkchromecast'
