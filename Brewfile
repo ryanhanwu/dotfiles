@@ -145,3 +145,5 @@ cask 'font-source-serif-pro'
 # Install Mac App Store apps
 mas 'Gapplin', id: 768053424
 mas 'Giphy Capture', id: 668208984
+mas 'JSON Helper for AppleScript', id: 453114608
+mas 'Location Helper for AppleScript', id: 488536386
