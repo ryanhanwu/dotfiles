@@ -109,6 +109,7 @@ cask 'robo-3t'
 cask 'sequel-pro'
 cask 'shuttle'
 cask 'vagrant'
+cask 'virtualbox'
 
 ## Multimedia
 cask 'mkchromecast'

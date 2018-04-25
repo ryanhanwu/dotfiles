@@ -63,4 +63,4 @@
 	newHighlight = green bold 22
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
