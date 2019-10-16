@@ -29,3 +29,7 @@ sh ./init.sh
 * System Node.js and [NVM](https://github.com/creationix/nvm)
 * Tmux [Oh My Tmux!](https://github.com/gpakosz/.tmux.git)
 * Sublime Text 3 [My own settings](https://github.com/ryanhanwu/Sublime-Text-Settings.git)
+
+### Updates
+
+2019.10.19 Now I use https://gist.github.com/ryanhanwu/059e210f8fe15e7eadc4a28e8b3e6b27 most of the time 
