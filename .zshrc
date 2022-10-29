@@ -10,8 +10,7 @@ export LANG=en_US.UTF-8
 export COMPLETION_WAITING_DOTS="true"
 
 # Plugins
-plugins=(autojump git git-extras git-prompt brew common-aliases zsh-autosuggestions copydir copyfile encode64 node osx sublime tmux xcode pod docker heroku nmap vagrant mvn yarn)
-
+plugins=(autojump git git-extras git-prompt brew common-aliases zsh-autosuggestions copydir copyfile encode64 node osx sublime tmux xcode pod docker heroku nmap vagrant vscode mvn yarn)
 source $ZSH/oh-my-zsh.sh
 ## zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -35,6 +34,8 @@ addPath "$HOME/.rvm/bin"
 addPath "/usr/local/opt/python/libexec/bin"
 ## Add PHP Pear tool
 addPath "$HOME/pear/bin"
+## Add Fastlane
+addPath "$HOME/.fastlane/bin"
 
 # Fix tmux error on Mac OS
 export EVENT_NOKQUEUE=1

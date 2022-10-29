@@ -8,9 +8,10 @@
 	diff = auto
 	ui = auto
 [core]
-	editor = vim
+	editor = /usr/bin/vim
 	excludesfile = ~/.gitignore_global
 	pager = diff-so-fancy | less --tabs=4 -RFX
+	ignorecase = false
 [alias]
 	st = status
 	ci = commit
@@ -47,6 +48,7 @@
 	merc = merge --no-ff
 [push]
 	default = matching
+	followTags = true
 [difftool "diffmerge"]
 	cmd = /usr/local/bin/diffmerge --nosplash \"$LOCAL\" \"$REMOTE\"
 	path =
@@ -64,3 +66,10 @@
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
+[merge]
+	tool = diffmerge
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
+[init]
+	defaultBranch = main
