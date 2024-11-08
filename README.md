@@ -41,3 +41,8 @@ sh ./init.sh
 ```
  ln -sf  ~/Dropbox/RyanDB/Mackup/.ssh/config ~/.ssh/config
 ```
+
+# Create backup folder
+```
+ ln -sf  ~/Dropbox/RyanDB/Mackup/.mackup ~/.mackup
+```
