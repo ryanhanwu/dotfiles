@@ -31,7 +31,6 @@ function cloneOrUpdate()
   fi
 }
 
-exit
 function symlink()
 {
   answer=N
@@ -61,24 +60,6 @@ symlink .gitconfig
 symlink .gitignore_global
 symlink .iterm2.zsh
 
-echo -e $'\e[1;37mInstalling Sublime-Text Settings\e[0m'
-(
-  cloneOrUpdate ~/Sublime-Text-Settings https://github.com/ryanhanwu/Sublime-Text-Settings.git
-  configPath=~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-  if [ -e "$configPath" ]; then
-    echo Skipped. Another configs were created at $configPath
-  else
-    echo ln -fs ~/Sublime-Text-Settings/User $configPath
-  fi
-)
-
-echo "Installing Tmux Plugin Manager from https://github.com/gpakosz/.tmux"
-(
-  cloneOrUpdate ~/.tmux https://github.com/gpakosz/.tmux.git
-  ln -s -f ~/.tmux/.tmux.conf ~/
-  cp ~/.tmux/.tmux.conf.local ~/
-)
-
 echo -e $'\e[1;37mConfiging Mac...\e[0m'
 check && echo Show '~/Library' folder
 chflags nohidden ~/Library
@@ -88,7 +69,7 @@ check && echo Show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 check && echo Show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
-check && echo Allow quitting Finder via ⌘ + Q; doing so will also hide desktop icons
+check && echo Allow quitting Finder via ⌘ + Q, doing so will also hide desktop icons
 defaults write com.apple.finder QuitMenuItem -bool true
 check && echo Update OS daily
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
@@ -109,8 +90,7 @@ echo -e $'\e[1;37mInstalling Oh My Zsh\e[0m'
 
 echo -e $'\e[1;37mInstalling Vim plugins\e[0m'
 (
-  cloneOrUpdate ~/.vim/bundle/vundle https://github.com/gmarik/Vundle.vim.git
-  vim +PluginInstall +qall
+  cloneOrUpdate ~/.vim_runtime https://github.com/amix/vimrc.git
 )
 
 echo -e $'\e[1;37mInstalling NVM\e[0m'

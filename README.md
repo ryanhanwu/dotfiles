@@ -20,16 +20,24 @@ sh ./init.sh
 * `~/.vimrc`
 * `~/.zshrc`
 
-
 ### Configurations
 
 * Shell [plugins&configurations](https://github.com/ryanhanwu/dotfiles/blob/master/.zshrc) through [Oh My Zsh]()
-* Vim [plugins & settings](https://github.com/ryanhanwu/dotfiles/blob/master/.vimrc) through [Vundle]()
+* Vim [plugins & settings](https://github.com/amix/vimrc) through The Ultimate vimrc.
 * Mac HomeBrew [settings](https://github.com/ryanhanwu/dotfiles/blob/master/Brewfile) through [Brewbundle](https://github.com/Homebrew/homebrew-bundle)
 * System Node.js and [NVM](https://github.com/creationix/nvm)
 * Tmux [Oh My Tmux!](https://github.com/gpakosz/.tmux.git)
-* Sublime Text 3 [My own settings](https://github.com/ryanhanwu/Sublime-Text-Settings.git)
 
-### Updates
+# Generate Your Development SSH Key
+1. Generate your key for the development machine
 
-2019.10.19 Now I use https://gist.github.com/ryanhanwu/059e210f8fe15e7eadc4a28e8b3e6b27 most of the time 
+    ```
+    ssh-keygen -t rsa -b 4096
+    ```
+
+1. Copy your public key (***~/.ssh/id_rsa.pub***) to your Github/Bitbucket Account's "SSH Keys"
+
+1. Link git config
+```
+ ln -sf  ~/Dropbox/RyanDB/Mackup/.ssh/config ~/.ssh/config
+```

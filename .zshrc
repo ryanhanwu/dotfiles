@@ -10,10 +10,10 @@ export LANG=en_US.UTF-8
 export COMPLETION_WAITING_DOTS="true"
 
 # Plugins
-plugins=(autojump git git-extras git-prompt brew common-aliases zsh-autosuggestions copydir copyfile encode64 node osx sublime tmux xcode pod docker heroku nmap vagrant vscode mvn yarn)
+plugins=(autojump git git-extras git-prompt brew common-aliases zsh-autosuggestions  copyfile encode64 node tmux xcode docker heroku nmap vscode yarn)
 source $ZSH/oh-my-zsh.sh
 ## zsh-syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ## Autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
