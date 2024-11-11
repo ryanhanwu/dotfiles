@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "homebrew/bundle": {
-        "revision": "bb8ff046665f91ff4d55d11bcc4cf317a5d47d27"
+        "revision": "207bc4aaccccda9eb6420ff41716fc19c10618d2"
       }
     },
     "brew": {
@@ -907,7 +907,7 @@
         }
       },
       "coconutbattery": {
-        "version": "3.9.17,C29E0D4F",
+        "version": "3.9.18,76D86CB9",
         "options": {
           "full_name": "coconutbattery"
         }
@@ -952,6 +952,30 @@
         "version": "1.95.2",
         "options": {
           "full_name": "visual-studio-code"
+        }
+      },
+      "miniconda": {
+        "version": "py312_24.9.2-0",
+        "options": {
+          "full_name": "miniconda"
+        }
+      },
+      "zoom": {
+        "version": "6.2.6.41824",
+        "options": {
+          "full_name": "zoom"
+        }
+      },
+      "google-chat": {
+        "version": "20.11.241",
+        "options": {
+          "full_name": "google-chat"
+        }
+      },
+      "diffusionbee": {
+        "version": "2.5.3",
+        "options": {
+          "full_name": "diffusionbee"
         }
       }
     },

@@ -39,6 +39,8 @@ cask 'microsoft-edge'
 
 ## Communication
 cask 'slack'
+cask 'zoom'
+cask 'google-chat'
 
 ## Productivity
 cask 'alfred'
@@ -58,6 +60,9 @@ cask 'namechanger'
 cask 'iterm2'
 cask 'visual-studio-code'
 
+## AI related
+cask 'miniconda'
+cask 'diffusionbee'
 
 ## Multimedia
 cask 'handbrake'
