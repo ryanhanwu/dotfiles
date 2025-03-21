@@ -13,39 +13,63 @@
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	ignorecase = false
 [alias]
-	st = status
-	ci = commit
-	co = checkout
-	br = branch
-	tags = tag -l
-	branches = branch -a
-	remotes = remote -v
-	rbr = remote update origin --prune
-	#Latest commit w/ contet
-	last = log -1 -U
-	# Flattern log w/ short-hash/subject/
-	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate
-	# ls + file number stats
-	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%C(bold)%s%C(cyan)\\ [%cn]%Creset" --decorate --numstat
-	# Tree log with files
-	files = log --oneline --decorate --all --graph --stat
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-	tree = log --graph --full-history --all --color --date=short --pretty=format:'%Cred%x09%h %Creset%ad%Cblue%d %Creset %s %C(bold)(%an)%Creset'
-  grog = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
-	# Log single file history w/o content
-	logf = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(cyan)\\ [%cn]%Creset" --follow -- #<FILE>
-	# Log single file history w content
-	showf = log --follow -p -- #<FILE>
-	# Show commit files
-	showc = diff-tree --no-commit-id --name-only -r
+	# Basic Git commands, shortened for quick access
+        st = status           # Show the working tree status
+        ci = commit           # Record changes to the repository
+        co = checkout         # Switch branches or restore working tree files
+        br = branch           # List, create, or delete branches
+        tags = tag -l         # List existing tags
+        branches = branch -a # List all branches (local and remote)
+        remotes = remote -v   # List remote repositories and their URLs
 
-	please = push --force-with-lease
-	commend = commit --amend --no-edit
-	stsh = stash --keep-index
-	staash = stash --include-untracked
-	staaash = stash --all
-	shorty = status --short --branch
-	merc = merge --no-ff
+        # Remote branch management
+        rbr = remote update origin --prune # Update remote-tracking branches and remove stale ones
+
+        # Log and history viewing
+        ## Show the latest commit with context (unified diff)
+        last = log -1 -U     
+        ## Show log with short hash, decorations, subject, and committer name
+        ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate 
+        # Show log with file number stats (additions/deletions)
+        ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%C(bold)%s%C(cyan)\\ [%cn]%Creset" --decorate --numstat 
+        # Show a graph of the log with file stats for each commit
+        files = log --oneline --decorate --all --graph --stat 
+        # Colorful graph log with relative commit dates and author
+        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -- 
+        # Tree-like graph log with full history and short dates
+        tree = log --graph --full-history --all --color --date=short --pretty=format:'%Cred%x09%h %Creset%ad%Cblue%d %Creset %s %C(bold)(%an)%Creset' 
+        # Detailed graph log with author date, relative time, and decorations.
+        grog = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\" 
+
+        # File-specific log viewing
+        # Show history of a single file, following renames, without content
+        logf = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(cyan)\\ [%cn]%Creset" --follow -- #<FILE>
+        # Show history of a single file, following renames, with content (patch diff)
+        showf = log --follow -p -- #<FILE>
+
+        # Commit inspection
+        # Show the files changed in a commit
+        showc = diff-tree --no-commit-id --name-only -r 
+
+        # Force push and commit amending
+        # Force push with lease to prevent overwriting others' work
+        please = push --force-with-lease 
+        # Amend the last commit without changing the commit message
+        commend = commit --amend --no-edit 
+
+        # Stash management
+        # Stash changes but keep the staged changes in the index
+        stsh = stash --keep-index 
+        # Stash changes including untracked files
+        staash = stash --include-untracked 
+        # Stash all changes, including untracked and ignored files
+        staaash = stash --all 
+
+        # Status and merging
+        # Show a short status summary with branch information
+        shorty = status --short --branch 
+        # Merge a branch with a no-fast-forward merge (creates a merge commit)
+        merc = merge --no-ff 
 [push]
 	default = matching
 	followTags = true
